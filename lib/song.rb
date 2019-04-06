@@ -17,18 +17,11 @@ class Song
 
   def save
     @@all << self
-    # self.class.all << self
-    # binding.pry
   end
 
   def self.new_by_name(name)
+    @song = self.new
     @song = name
-    # binding.pry
-    # song = @song
-    # @name = name
-    # binding.pry
-    # song.name = name
-    # song.name
   end
 
   def self.create_by_name
