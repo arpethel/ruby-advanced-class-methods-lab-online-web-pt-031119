@@ -6,7 +6,7 @@ class Song
 
   # Use this constructor instead of #initialize. Constructors extend #initialize functionality
   def self.create
-    binding.pry
+    # binding.pry
     @song = self.new
     @song.save
     @song
