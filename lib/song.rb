@@ -37,10 +37,8 @@ class Song
   end
 
   def self.find_or_create_by_name(name)
-    # binding.pry
     self.find_by_name(name) || self.create_by_name(name)
-    # binding.pry
-    @song
+    # @song
   end
 
   def self.alphabetical
