@@ -34,7 +34,8 @@ class Song
 
   def self.find_by_name(name)
     binding.pry
-    @@all.each { |name| @song if name == @song }
+    result = @@all.detect {|song| song.name = name}
+    # @@all.each { |name| @song if name == @song }
     #   binding.pry
     #   if name == @song
     #     @song
