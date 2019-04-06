@@ -56,14 +56,13 @@ class Song
     song = self.new
     song.name = @song.name
     song.artist_name = artist_name
-    # binding.pry
     song
   end
 
   def self.create_from_filename(filename)
     # binding.pry
     song = self.new_from_filename(filename)
-    # binding.pry
+    binding.pry
     song.save
     song
   end
