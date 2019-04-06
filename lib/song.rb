@@ -41,7 +41,7 @@ class Song
     # binding.pry
     # self.find_by_name(name) ||
     self.create_by_name(name)
-    binding.pry
+    @song
   end
 
   def self.alphabetical
