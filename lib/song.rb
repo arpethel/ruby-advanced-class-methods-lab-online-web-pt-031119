@@ -33,6 +33,7 @@ class Song
   end
 
   def self.find_by_name(name)
+    binding.pry
     song if @@all.include?(name)
 
   end
