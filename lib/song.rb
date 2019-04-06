@@ -66,7 +66,7 @@ class Song
     @song.name = data[1].gsub(".mp3", "")
 
     song = self.new_from_filename(filename)
-    # binding.pry
+    binding.pry
     song.save
     song
   end
