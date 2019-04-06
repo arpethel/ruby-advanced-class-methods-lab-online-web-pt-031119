@@ -65,9 +65,13 @@ class Song
     artist_name = data[0]
     @song.name = data[1].gsub(".mp3", "")
 
-    song = self.new_from_filename(filename)
-    binding.pry
+    song = self.new
+    # song = self.new_from_filename(filename)
+    song.name = @song.name
+    song.artist_name = artist_name
+    # binding.pry
     song.save
+    binding.pry
     song
   end
 
