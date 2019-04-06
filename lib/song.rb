@@ -48,7 +48,6 @@ class Song
 
   def self.new_from_filename(filename)
     row = filename
-    # binding.pry
     data = row.split(" - ")
     artist_name = data[0]
     @song.name = data[1].gsub(".mp3", "")
@@ -56,12 +55,16 @@ class Song
     song = self.new
     song.name = @song.name
     song.artist_name = artist_name
-    # binding.pry
+
     song
   end
 
   def self.create_from_filename(filename)
-    # binding.pry
+    row = filename
+    data = row.split(" - ")
+    artist_name = data[0]
+    @song.name = data[1].gsub(".mp3", "")
+
     song = self.new_from_filename(filename)
     # binding.pry
     song.save
