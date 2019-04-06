@@ -56,7 +56,7 @@ class Song
     song = self.new
     song.name = @song.name
     song.artist_name = artist_name
-    binding.pry
+    # binding.pry
     song
   end
 
