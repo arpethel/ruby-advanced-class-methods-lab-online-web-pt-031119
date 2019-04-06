@@ -48,10 +48,23 @@ class Song
     @@all.sort_by { |song| song.name }
   end
 
-  def self.new_from_filename
+  def self.new_from_filename(filename)
+    row = filename
+
+    data = row.split(" - ")
+    artist_name = data[0]
+    song.name = data[1].gsub(".mp3", "")
+
+    song = self.new
+    song.name = song_name
+    song.artist_name = artist_name
+    song
   end
 
-  def self.create_from_filename
+  def self.create_from_filename(filename)
+    song = self.new_from_filename(filename)
+    song.save
+    song
   end
 
   def self.destroy_all
