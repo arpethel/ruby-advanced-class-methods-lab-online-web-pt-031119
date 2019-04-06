@@ -71,7 +71,7 @@ class Song
     song.artist_name = artist_name
     # binding.pry
     song.save
-    binding.pry
+    # binding.pry
     song
   end
 
