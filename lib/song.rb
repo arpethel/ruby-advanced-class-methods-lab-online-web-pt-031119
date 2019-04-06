@@ -34,7 +34,7 @@ class Song
 
   def self.find_by_name(name)
     # binding.pry
-    result = @@all.detect {|song| song.name = name}
+    result = self.all.detect {|song| song.name == name}
     # @@all.each { |name| @song if name == @song }
     #   binding.pry
     #   if name == @song
@@ -73,8 +73,6 @@ class Song
   def self.create_from_filename(filename)
     song = self.new_from_filename(filename)
     song.save
-    # binding.pry
-    # song
   end
 
   def self.destroy_all
